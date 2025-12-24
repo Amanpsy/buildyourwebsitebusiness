@@ -11,22 +11,22 @@ export default function Services() {
 
   const services = [
     {
-      icon: <FaLaptopCode className="text-4xl text-[#D4AF37] mb-4" />,
+      icon: <FaLaptopCode className="text-3xl sm:text-4xl md:text-4xl text-[#D4AF37] mb-3 sm:mb-4" />,
       title: "Premium Websites",
       desc: "Big-brand design that builds trust, authority, and converts visitors into loyal customers.",
     },
     {
-      icon: <FaBullseye className="text-4xl text-[#D4AF37] mb-4" />,
+      icon: <FaBullseye className="text-3xl sm:text-4xl md:text-4xl text-[#D4AF37] mb-3 sm:mb-4" />,
       title: "Conversion Landing Pages",
       desc: "High-performing pages designed with data-backed strategies to maximize leads and sales.",
     },
     {
-      icon: <FaPalette className="text-4xl text-[#D4AF37] mb-4" />,
+      icon: <FaPalette className="text-3xl sm:text-4xl md:text-4xl text-[#D4AF37] mb-3 sm:mb-4" />,
       title: "UI/UX & Brand Strategy",
       desc: "We craft designs aligned with your business goals, ensuring clarity, usability, and impact.",
     },
     {
-      icon: <FaTachometerAlt className="text-4xl text-[#D4AF37] mb-4" />,
+      icon: <FaTachometerAlt className="text-3xl sm:text-4xl md:text-4xl text-[#D4AF37] mb-3 sm:mb-4" />,
       title: "Custom Dashboards",
       desc: "Powerful internal tools to manage your operations, analytics, and reporting efficiently.",
     },
@@ -56,35 +56,35 @@ export default function Services() {
 
   return (
     <section
-    id='Services'
+      id='Services'
       ref={sectionRef}
-      className="py-32  text-[#F5F5F5]"
+      className="py-20 sm:py-28 md:py-32 text-[#F5F5F5]"
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <div className="h-[3px] w-24 bg-[#D4AF37] mx-auto mb-6 rounded-full" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="h-[3px] w-16 sm:w-24 bg-[#D4AF37] mx-auto mb-4 sm:mb-6 rounded-full" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             How We Help Your Business Grow
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
+          <p className="text-white/60 max-w-xs sm:max-w-xl md:max-w-2xl mx-auto text-sm sm:text-base md:text-lg">
             We combine strategy, design, and cutting-edge technology to create impactful solutions that drive growth, increase conversions, and build brand authority.
           </p>
         </div>
 
         {/* Services Cards */}
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
           {services.map((s, i) => (
             <div
               key={i}
               ref={(el) => el && cardsRef.current.push(el)}
-              className="group bg-[#111111] p-10 rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-500 shadow-xl hover:shadow-2xl"
+              className="group bg-[#111111] p-6 sm:p-8 md:p-10 rounded-2xl border border-[#D4AF37]/10 hover:border-[#D4AF37]/40 transition-all duration-500 shadow-lg sm:shadow-xl hover:shadow-2xl"
             >
-              <div className="mb-4">{s.icon}</div>
-              <h3 className="text-2xl font-semibold mb-4 group-hover:text-[#D4AF37] transition">
+              <div className="mb-3 sm:mb-4">{s.icon}</div>
+              <h3 className="text-xl sm:text-2xl md:text-2xl font-semibold mb-2 sm:mb-4 group-hover:text-[#D4AF37] transition">
                 {s.title}
               </h3>
-              <p className="text-white/60 leading-relaxed">{s.desc}</p>
+              <p className="text-white/60 text-sm sm:text-base md:text-base leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
